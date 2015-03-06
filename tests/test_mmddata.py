@@ -128,7 +128,7 @@ Doc body
         self.assertEqual(
             mmddata.get_raw_data(self.ddoc),
             (
-                '\nDoc body\n',  # TODO: eliminate the blank line at start of doc
+                'Doc body\n',
                 {
                     'title': ['Foo Bar'],
                     'author': ['John'],
@@ -156,7 +156,7 @@ Doc body
         self.assertEqual(
             mmddata.get_data(self.ddoc, self.tc),
             (
-                '\nDoc body\n',  # TODO: eliminate the blank line at start of doc
+                'Doc body\n',
                 {
                     'title': 'Foo Bar',
                     'author': 'JOHN',

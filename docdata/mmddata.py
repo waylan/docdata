@@ -132,7 +132,7 @@ def get_raw_data(doc):
             else:
                 lines.insert(0, line)
                 break  # no meta data - done
-    return '\n'.join(lines), data
+    return '\n'.join(lines).lstrip('\n'), data
 
 
 def get_data(doc, transformers=tc):
