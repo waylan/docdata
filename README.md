@@ -101,7 +101,7 @@ def default(value):
     return ' '.join(value)
 ```
 
-### Tread Safety
+### Collection Isolation
 
 In the above examples, the transformers did not need to be passed to the
 meta-data parser. Still, `docdata.mmddata.get_data` did the right thing.
