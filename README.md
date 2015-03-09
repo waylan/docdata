@@ -18,7 +18,7 @@ point you can forward the document on to your lightweight markup processor of
 choice. You might even want to use some the meta-data to configure the behavior
 of your lightweight markup processor.
 
-YAML Meta-Data (not yet implemented)
+YAML Meta-Data
 --------------
 
 Given a document that contains YAML style meta-data, simply pass it to
@@ -32,9 +32,13 @@ doc, data = get_data(doc)
 
 The `docdata.yamldata.get_data` function will return a tuple which contains the
 document with the meta-data removed and the meta-data as returned by the YAML
-parser. As YAML provides for and recognizes various types out-of-the-box,
-no additional features need to be provided. The document can now be passed to
-your lightweight markup processor of choice.
+parser. Note that if the YAML root data structure parsed by YAML is not a
+dictionary, it is assumed that no data is defined, the YAML block is not
+removed from the document, and an empty dict is returned as data.
+
+As YAML provides for and recognizes various types out-of-the-box, no additional
+features need to be provided. The document can now be passed to your lightweight
+markup processor of choice.
 
 MultiMarkdown Meta-Data
 -----------------------
