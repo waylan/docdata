@@ -11,6 +11,6 @@ setup(
     version=ver,
     url='https://github.com/waylan/docdata',
     packages=['docdata'],
-    install_requires = ['yaml'],
+    install_requires = ['pyyaml'],
     license='BSD'
 )
